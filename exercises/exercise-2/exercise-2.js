@@ -70,3 +70,29 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function findGryffindor(array) {
+  console.log(`Task one`);
+  array.forEach((element) => {
+    if (element.house === "Gryffindor") {
+      const { firstName, lastName, house, pet, occupation } = element;
+      console.log(`${firstName} ${lastName}`);
+    }
+    
+  });
+  console.log(`\n`);
+}
+
+findGryffindor(hogwarts);
+
+function findTeacherWithPet(array) {
+  console.log(`Task two`);
+  array.forEach((element) => {
+    if (element.pet && element.occupation === "Teacher") {
+      const { firstName, lastName, house, pet, occupation } = element;
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+findTeacherWithPet(hogwarts);
